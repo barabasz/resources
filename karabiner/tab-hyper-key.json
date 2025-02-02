@@ -1,0 +1,18 @@
+{
+    "description": "tab → hyper key on hold",
+    "manipulators": [
+        {
+            "from": {
+                "key_code": "tab",
+                "modifiers": { "mandatory": ["right_control"] }
+            },
+            "to": [
+                {
+                    "key_code": "left_shift",
+                    "modifiers": ["left_control", "left_option", "left_command"]
+                }
+            ],
+            "type": "basic"
+        }
+    ]
+}
