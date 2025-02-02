@@ -1,0 +1,23 @@
+{
+    "description": "Powerful caps_lock 💪 (real caps_lock with fn)",
+    "manipulators": [
+        {
+            "description": "enable caps_lock with fn",
+            "from": {
+                "key_code": "fn",
+                "modifiers": { "mandatory": ["right_control"] }
+            },
+            "to": [{ "key_code": "caps_lock" }],
+            "type": "basic"
+        },
+        {
+            "description": "disable caps_lock with fn",
+            "from": {
+                "key_code": "fn",
+                "modifiers": { "mandatory": ["right_control", "caps_lock"] }
+            },
+            "to": [{ "key_code": "caps_lock" }],
+            "type": "basic"
+        }
+    ]
+}
