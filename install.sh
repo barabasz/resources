@@ -182,7 +182,7 @@ function verinf() {
     fi
     if command -v "$1" > /dev/null 2>&1; then
         app=$appname
-        ver=$($cliname $vercmmd | grep -Eo $regexver | head -1)
+        ver=$($cliname $vercmmd | head -1)
         pth=$(whereis -b $cliname)
         echo "$app $ver $message $pth"
     else
