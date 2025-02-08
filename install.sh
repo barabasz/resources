@@ -205,4 +205,4 @@ function makeconfln() {
     fi
 }
 
-echo "Install environment and functions successfully loaded."
+printhead "Install environment and functions successfully loaded."
