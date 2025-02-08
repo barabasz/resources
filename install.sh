@@ -190,12 +190,13 @@ function verinf() {
             app="${green}${appname}${clear}"
             ver="$yellow$($cliname $vercmmd | grep -Eo $regexver | head -1)$clear"
             pth="$blue${$(whereis -b $cliname)#*: }$clear"
+            print "$app $ver $message $pth"
         else
             app=$appname
             ver=$($cliname $vercmmd | grep -Eo $regexver | head -1)
             pth=$(whereis -b $cliname)
+            echo "$app $ver $message $pth"
         fi
-        print "$app $ver $message $pth"
     else
         print "${red}$1${clear} is not available"
         return 2
