@@ -205,7 +205,3 @@ function makeconfln() {
         echo "symlink $CONFDIR/$1 → $GHCONFDIR/$1 created"
     fi
 }
-
-echo "Install environment and functions successfully loaded."
-
-
