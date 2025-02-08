@@ -4,6 +4,7 @@
 
 # Env
 
+export PATH=$HOME/bin:$HOME/bin/install:$HOME/binos:/usr/local/bin:$PATH
 export ZDOTDIR=$HOME/.config/zsh
 export HISTFILE=$ZDOTDIR/.zsh_history
 export HISTSIZE=1000
@@ -39,7 +40,7 @@ export LC_NUMERIC=pl_PL.UTF-8
 export LC_PAPER=pl_PL.UTF-8
 export LC_TELEPHONE=pl_PL.UTF-8
 export LC_TIME=pl_PL.UTF-8
-export LC_ALL=
+export LC_ALL=en_US.UTF-8
 
 # Functions
 
