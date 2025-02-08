@@ -161,16 +161,11 @@ function fman() {
 function verinf() {
     regexver='\b\d{1,}\.\d{1,}(\.\d{1,}){0,}\b'
     message="is installed in"
-    blue='\e[0;94m'
-    yellow='\e[38;5;227m'
-    green='\e[1;32m'
-    red='\e[38;5;196m'
-    clear='\033[0m'
     if [[ -z "$1" ]]; then
-        print "usage:$green verinf$clear cliname appname versioncommand"
+        echo "usage:$green verinf$clear cliname appname versioncommand"
         return 1
     elif [[ ! -z "$4" ]]; then
-        print "too many parameters"
+        echo "too many parameters"
         return 1
     elif [[ -z "$2" ]]; then
         cliname=$1
@@ -186,19 +181,12 @@ function verinf() {
         vercmmd=$3
     fi
     if command -v "$1" > /dev/null 2>&1; then
-        if [ "$SHELL" = "/bin/zsh" ]; then
-            app="${green}${appname}${clear}"
-            ver="$yellow$($cliname $vercmmd | grep -Eo $regexver | head -1)$clear"
-            pth="$blue${$(whereis -b $cliname)#*: }$clear"
-            print "$app $ver $message $pth"
-        else
-            app=$appname
-            ver=$($cliname $vercmmd | grep -Eo $regexver | head -1)
-            pth=$(whereis -b $cliname)
-            echo "$app $ver $message $pth"
-        fi
+        app=$appname
+        ver=$($cliname $vercmmd | grep -Eo $regexver | head -1)
+        pth=$(whereis -b $cliname)
+        echo "$app $ver $message $pth"
     else
-        print "${red}$1${clear} is not available"
+        echo "$1 is not available"
         return 2
     fi
 }
