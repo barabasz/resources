@@ -20,6 +20,8 @@ export GHDIR=$HOME/GitHub
 export GHBINDIR=$GHDIR/bin
 export GHCONFDIR=$GHDIR/config
 export CONFDIR=$XDG_CONFIG_HOME
+export HOMEBREW_NO_ENV_HINTS=1
+export HOMEBREW_NO_EMOJI=1
 
 # Locale
 
