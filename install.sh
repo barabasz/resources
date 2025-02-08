@@ -1,3 +1,7 @@
+#!/bin/bash
+
+# THIS SCRIPT IS INTENTIONALLY WRITTEN IN BASH
+
 # Env
 
 export ZDOTDIR=$HOME/.config/zsh
