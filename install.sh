@@ -186,9 +186,15 @@ function verinf() {
         vercmmd=$3
     fi
     if command -v "$1" > /dev/null 2>&1; then
-        app="${green}${appname}${clear}"
-        ver="$yellow$($cliname $vercmmd | grep -Eo $regexver | head -1)$clear"
-        pth="$blue${$(whereis -b $cliname)#*: }$clear"
+        if [ "$SHELL" = "/bin/zsh" ]; then
+            app="${green}${appname}${clear}"
+            ver="$yellow$($cliname $vercmmd | grep -Eo $regexver | head -1)$clear"
+            pth="$blue${$(whereis -b $cliname)#*: }$clear"
+        else
+            app=$appname
+            ver=$($cliname $vercmmd | grep -Eo $regexver | head -1)
+            pth=$(whereis -b $cliname)
+        fi
         print "$app $ver $message $pth"
     else
         print "${red}$1${clear} is not available"
@@ -210,3 +216,5 @@ function makeconfln() {
 }
 
 echo "Install environment and functions successfully loaded."
+
+
