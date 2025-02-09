@@ -98,6 +98,16 @@ function isinstalledbybrew() {
     fi
 }
 
+# Remove target and create symlink
+function lnf() {
+    if [[ -r $2 ]]; then
+        rm -r $2
+        echo "removed $2"
+    fi
+    ln -sfF $1 $2
+    echo "symlink $2 → $1 created"
+}
+
 # Create dir and enter it
 function mdcd() {
     mkdir -p $1 && cd $_
