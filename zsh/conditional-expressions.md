@@ -1,4 +1,6 @@
-A _[conditional expression](https://zsh.sourceforge.io/Doc/Release/Conditional-Expressions.html)_ is used with the \[\[ compound command to test attributes of files and to compare strings. Each expression can be constructed from one or more of the following unary or binary expressions:
+# zsh Conditional Expressions
+
+A **conditional expression** is used with the \[\[ compound command to test attributes of files and to compare strings. Each expression can be constructed from one or more of the following unary or binary expressions:
 
 Example:
 
