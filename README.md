@@ -2,4 +2,6 @@
 
 A repository with various useful things (fonts, manuals, cheatsheets, etc.)
 
-test <small>test</small>
+test <span style="font-size: 50%;">🟣</span>
+
+<span style="color: #ff0000;">•</span>
